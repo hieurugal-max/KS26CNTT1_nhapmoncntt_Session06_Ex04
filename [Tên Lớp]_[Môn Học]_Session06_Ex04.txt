@@ -1,0 +1,14 @@
+Phần 1: So sánh
+1. Toán tử > và lệnh Out-File:
+- Cơ chế: Ghi đè nội dung cũ của file.
+- Rủi ro: Có thể làm mất toàn bộ nhật ký trước đó.
+- Sử dụng: Tạo báo cáo mới cho ca sáng.
+Ví dụ:
+"Fixed bug" > history.txt
+"Fixed bug" | Out-File history.txt
+2. Toán tử >> và lệnh Add-Content:
+- Cơ chế: Ghi thêm nội dung vào cuối file, giữ nguyên dữ liệu cũ.
+- Rủi ro: Thấp hơn, tránh ghi đè nhật ký đã lưu.
+- Sử dụng: Theo dõi hệ thống liên tục 24/7.
+Phần 2: Cảnh báo
+Gõ nhầm > thay cho >> sẽ ghi đè file và làm mất nhật ký cũ. Trong ngân hàng, việc này có thể làm mất bằng chứng bảo trì, gây khó khăn khi truy vết sự cố và kiểm toán hệ thống. Vì vậy, cần kiểm tra kỹ toán tử trước khi thực thi lệnh ghi file.
